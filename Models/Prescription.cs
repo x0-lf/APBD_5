@@ -4,7 +4,7 @@ namespace APBD_5.Models;
 
 public class Prescription
 {
-    [Required]
+    [Key]
     public int IdPrescription { get; set; }
     
     [Required]

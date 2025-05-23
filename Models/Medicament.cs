@@ -4,7 +4,7 @@ namespace APBD_5.Models;
 
 public class Medicament
 {
-    [Required]
+    [Key]
     public int IdMedicament { get; set; }
     
     [Required, StringLength(100)]

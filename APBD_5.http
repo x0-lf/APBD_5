@@ -1,6 +1,61 @@
 @APBD_5_HostAddress = http://localhost:5250
 
-GET {{APBD_5_HostAddress}}/weatherforecast/
+### Create Prescription
+POST {{APBD_5_HostAddress}}/api/prescriptions
+Content-Type: application/json
+
+{
+  "patient": {
+    "firstName": "Jan",
+    "lastName": "Niezbedny",
+    "birthDate": "1969-05-05"
+  },
+  "idDoctor": 1,
+  "medicaments": [
+    {
+      "idMedicament": 1,
+      "dose": 2,
+      "details": "Twice a day"
+    },
+    {
+      "idMedicament": 3,
+      "dose": 1,
+      "details": "After breakfast"
+    }
+  ],
+  "date": "2024-05-20",
+  "dueDate": "2024-06-10"
+}
+
+### Get Full Patient Info (Prescriptions + Doctors + Medicaments)
+GET {{APBD_5_HostAddress}}/api/patients/1
 Accept: application/json
 
-###
+### Create Prescription with more then 10 Medicaments (fails to create such -> 400 + error Message)
+POST {{APBD_5_HostAddress}}/api/prescriptions
+Content-Type: application/json
+
+{
+  "patient": {
+    "firstName": "Jan",
+    "lastName": "Niezbedny",
+    "birthDate": "1969-05-05"
+  },
+  "idDoctor": 1,
+  "medicaments": [
+    { "idMedicament": 1, "dose": 1, "details": "Twice a day" },
+    { "idMedicament": 2, "dose": 1, "details": "After breakfast" },
+    { "idMedicament": 3, "dose": 1, "details": "Twice a day" },
+    { "idMedicament": 4, "dose": 1, "details": "Twice a day" },
+    { "idMedicament": 5, "dose": 1, "details": "After breakfast" },
+    { "idMedicament": 6, "dose": 1, "details": "After breakfast" },
+    { "idMedicament": 7, "dose": 1, "details": "After breakfast" },
+    { "idMedicament": 8, "dose": 1, "details": "After Wakeup" },
+    { "idMedicament": 9, "dose": 1, "details": "After Wakeup" },
+    { "idMedicament": 10, "dose": 1, "details": "Before Bed" },
+    { "idMedicament": 11, "dose": 1, "details": "Before Bed" }
+  ],
+  "date": "2024-05-20",
+  "dueDate": "2024-06-10"
+}
+

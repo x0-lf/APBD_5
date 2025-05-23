@@ -4,7 +4,7 @@ namespace APBD_5.Models;
 
 public class Patient
 {
-    [Required]
+    [Key]
     public int IdPatient { get; set; }
     
     [Required, StringLength(100)]
