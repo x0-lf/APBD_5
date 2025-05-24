@@ -13,7 +13,8 @@ public class Program
 
         // Logging
         builder.Logging.ClearProviders();
-        builder.Logging.AddConsole();
+        //Debug Queries (N+1)
+        //builder.Logging.AddConsole();
         
         
         builder.Services.AddDbContext<AppDbContext>(options =>
