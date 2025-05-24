@@ -75,7 +75,7 @@ cd APBD_5
 
 2. Uncomment the line 16 in Program.cs
 ```
-\\builder.Logging.AddConsole();
+//builder.Logging.AddConsole();
 ```
 
 # Running Unit Tests
