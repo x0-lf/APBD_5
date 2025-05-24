@@ -66,7 +66,17 @@ Building...
 info: Microsoft.EntityFrameworkCore.Database.Command[20101]
 ```
 
-To turn it off just go into the 
+# How to Turn on Debugging Queries (Helpful in the N+1 Analyse)
+
+1. Go to the
+```
+cd APBD_5
+```
+
+2. Uncomment the line 16 in Program.cs
+```
+\\builder.Logging.AddConsole();
+```
 
 # Running Unit Tests
 
