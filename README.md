@@ -111,7 +111,7 @@ dotnet test
 
 Similarly to the previous Project, there is also a [APBD_5.http](./APBD_5.http) file which let you test those endpoints in Jetbrains Rider or Visual Studio environment.
 
-### Previous Projects
+### Previous Projects in the Series
 
 **[APBD_4 - Warehouse Management](https://github.com/x0-lf/APBD_4)**  
 
@@ -120,3 +120,7 @@ Similarly to the previous Project, there is also a [APBD_5.http](./APBD_5.http) 
 **[APBD_2 - Simple 20 LINQ xUnit Tests](https://github.com/x0-lf/APBD_2)**
 
 **[APBD_1 - Simple yet Advanced Logistics Manager Example](https://github.com/x0-lf/APBD_1)**
+
+### Next Projects in the Series
+
+**[APBD_6 – EF (Database First) Client and Trip Management API](https://github.com/x0-lf/APBD_6)**
